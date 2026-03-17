@@ -1,23 +1,24 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Cars from './Components/Cars'
-import Counter from './Components/Counter'
+import Page1 from './pages/Page1.jsx'
+import Page2 from './pages/Page2.jsx'
+import Page3 from './pages/Page3.jsx'
+import Navbar from './Components/Navbar.jsx'
 
 function App() {
   return (
-    <div className="app-shell stack-lg">
-      <header className="stack">
-        <h1>Salut</h1>
-        <p>Un mic demo cu Redux Counter.</p>
-      </header>
-
-      <section className="surface">
-        <Counter />
-      </section>
-
-      <section>
-        <Cars />
-      </section>
-    </div>
+    <BrowserRouter>
+      <div className="app-shell">
+      <Navbar />
+        <main className="page-content">
+          <Routes>
+            <Route path="/" element={<Page1 />} />
+            <Route path="/page2" element={<Page2 />} />
+            <Route path="/page3" element={<Page3 />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   )
 }
 

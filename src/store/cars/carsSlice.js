@@ -9,6 +9,9 @@ export const carsSlice = createSlice({
     clearCarsError(state) {
       state.error = null;
     },
+    selectCar(state, action) {
+      state.currentCar = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -29,5 +32,5 @@ export const carsSlice = createSlice({
   },
 });
 
-export const { clearCarsError } = carsSlice.actions;
+export const { clearCarsError, selectCar } = carsSlice.actions;
 export default carsSlice.reducer;

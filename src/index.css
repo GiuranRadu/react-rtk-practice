@@ -1,218 +1,32 @@
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #0f172a;
-  background-color: #f9fafb;
+  background:
+    radial-gradient(circle at top, #dbeafe 0%, #eff6ff 35%, #f8fafc 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Scale */
-  --page-max-width: 960px;
-
-  /* Colors */
-  --color-bg: #f9fafb;
-  --color-surface: #ffffff;
-  --color-border: #e5e7eb;
-  --color-muted: #6b7280;
-  --color-primary: #2563eb;
-  --color-primary-soft: #dbeafe;
-  --color-primary-strong: #1d4ed8;
-  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
 html,
-body {
-  min-height: 100%;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #e5edff 0%, #f9fafb 40%, #f3f4f6 100%);
-  color: #0f172a;
-}
-
+body,
 #root {
+  min-width: 320px;
   min-height: 100vh;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  padding: 2.5rem 1.5rem;
-}
-
-.app-shell {
-  width: 100%;
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  background-color: var(--color-surface);
-  border-radius: 1.25rem;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  box-shadow: var(--shadow-soft);
-  padding: 2rem 2.25rem 2.25rem;
-}
-
-@media (max-width: 640px) {
-  #root {
-    padding: 1.5rem 1.25rem;
-  }
-
-  .app-shell {
-    padding: 1.5rem 1.4rem 1.6rem;
-    border-radius: 1rem;
-  }
-}
-
-main {
-  width: 100%;
+  margin: 0;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
-a:hover {
-  color: var(--color-primary-strong);
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
-button {
-  border: 0;
-  cursor: pointer;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  padding: 0.55rem 0.95rem;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  background: linear-gradient(135deg, #ffffff, #f9fafb);
-  color: #0f172a;
-  font-size: 0.9rem;
-  font-weight: 500;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
-  transition:
-    background-color 120ms ease,
-    border-color 120ms ease,
-    box-shadow 120ms ease,
-    transform 80ms ease;
-}
-
-.btn:hover {
-  border-color: rgba(37, 99, 235, 0.7);
-  background: linear-gradient(135deg, #eff6ff, #ffffff);
-  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
-  transform: translateY(-1px);
-}
-
-.btn:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
-  color: #f9fafb;
-  border-color: transparent;
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.32);
-}
-
-.btn-primary:hover {
-  background: linear-gradient(135deg, var(--color-primary-strong), #1e40af);
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 0.55rem 0.7rem;
-  border-radius: 0.65rem;
-  border: 1px solid rgba(148, 163, 184, 0.75);
-  background-color: rgba(255, 255, 255, 0.9);
-  color: inherit;
-  outline: none;
-  transition:
-    border-color 120ms ease,
-    box-shadow 120ms ease,
-    background-color 120ms ease;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: rgba(37, 99, 235, 0.85);
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.32);
-  background-color: #ffffff;
-}
-
-label {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--color-muted);
-  margin-bottom: 0.35rem;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  font-size: clamp(1.6rem, 1.3rem + 0.9vw, 2.1rem);
-}
-
-h2 {
-  font-size: clamp(1.3rem, 1.1rem + 0.5vw, 1.6rem);
-}
-
-p {
-  margin: 0;
-  color: var(--color-muted);
-}
-
-.stack {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.stack-lg {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.surface {
-  border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(148, 163, 184, 0.45);
-  padding: 1.25rem 1.4rem;
-}
-
-.surface-muted {
-  background: radial-gradient(circle at top left, var(--color-primary-soft), #f9fafb);
-  border-color: rgba(129, 140, 248, 0.5);
+body {
+  min-height: 100vh;
 }

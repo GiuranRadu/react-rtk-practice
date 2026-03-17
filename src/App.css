@@ -12,6 +12,8 @@
   display: flex;
   gap: 12px;
   margin-bottom: 32px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .nav-link {
@@ -111,4 +113,9 @@
   .navbar {
     flex-direction: column;
   }
+}
+
+
+p{
+  margin: 0;
 }
