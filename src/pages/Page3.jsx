@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { selectCar } from '../store/cars/carsSlice'
 
 const Page3 = () => {
-  const currentCar = useSelector((state) => state.cars.currentCar)
+  const {currentCar} = useSelector((state) => state.cars)
   const dispatch = useDispatch()
   const clearCar = () => {
     dispatch(selectCar(null))

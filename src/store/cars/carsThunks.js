@@ -6,10 +6,15 @@ export const fetchCars = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const res = await fetch(`${API_BASE_URL}get-all-cars/`);
-      if (!res.ok) throw new Error("Failed to fetch cars");
+      // const res = await fetch(`${API_BASE_URL}get-all-cars-simulate-error/`);
       const data = await res.json();
+      if (!res.ok) {
+        // error message din backend
+        throw new Error(data.message || "Failed to fetch cars");
+      }
       return data;
     } catch (err) {
+      console.log(err)
       return rejectWithValue(err.message ?? "Unknown error");
     }
   }
