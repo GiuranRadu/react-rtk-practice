@@ -5,7 +5,7 @@ export const fetchCars = createAsyncThunk(
   "cars/fetchCars",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch(`${API_BASE_URL}get-all-cars//`);
+      const res = await fetch(`${API_BASE_URL}get-all-cars/`);
       if (!res.ok) throw new Error("Failed to fetch cars");
       const data = await res.json();
       return data;

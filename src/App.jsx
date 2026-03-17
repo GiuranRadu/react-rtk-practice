@@ -1,4 +1,5 @@
 import './App.css'
+import Cars from './Components/Cars'
 import Counter from './Components/Counter'
 
 function App() {
@@ -11,6 +12,10 @@ function App() {
 
       <section className="surface">
         <Counter />
+      </section>
+
+      <section>
+        <Cars />
       </section>
     </div>
   )
