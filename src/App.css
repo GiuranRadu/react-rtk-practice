@@ -1,0 +1,114 @@
+.app-shell {
+  width: min(960px, calc(100% - 32px));
+  margin: 48px auto;
+  padding: 32px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.nav-link {
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: #1e293b;
+  background: #e2e8f0;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #cbd5e1;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background: #0f172a;
+}
+
+.page-content {
+  min-height: 220px;
+  text-align: left;
+}
+
+.page-content h1 {
+  margin: 0 0 12px;
+  font-size: 2.5rem;
+  color: #0f172a;
+}
+
+.page-content p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+.user-form {
+  display: grid;
+  gap: 16px;
+  max-width: 420px;
+  margin-top: 24px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font: inherit;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.form-field input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #60a5fa;
+}
+
+.user-form button {
+  width: fit-content;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  background: #0f172a;
+}
+
+.user-card {
+  max-width: 420px;
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.user-card p + p {
+  margin-top: 12px;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    margin: 24px 16px;
+    padding: 24px;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+}
