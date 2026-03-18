@@ -27,7 +27,7 @@ const Navbar = () => {
                 Page3
             </NavLink>
             <p>Total cars: {cars.length}</p>
-            <p>Car ID: {currentCar}</p>
+            <p>Selected car ID: {currentCar}</p>
         </nav>
 
     )
