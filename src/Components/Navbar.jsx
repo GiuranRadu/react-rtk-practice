@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const Navbar = () => {
-    const { cars, error } = useSelector((state) => state.cars)
+    const { cars } = useSelector((state) => state.cars)
     const currentCar = useSelector((state) => state.cars.currentCar)
     return (
         <nav className="navbar">
@@ -27,7 +27,7 @@ const Navbar = () => {
                 Page3
             </NavLink>
             <p>Total cars: {cars.length}</p>
-            <p>Current car ID: {currentCar}</p>
+            <p>Car ID: {currentCar}</p>
         </nav>
 
     )
